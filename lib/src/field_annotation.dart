@@ -1,7 +1,7 @@
 import 'package:meta/meta_meta.dart';
 
-// @Target({TargetKind.field, TargetKind.getter, TargetKind.setter})
-@Target({TargetKind.field})
+@Target({TargetKind.field, TargetKind.getter, TargetKind.setter})
+// @Target({TargetKind.field})
 class JsonKey {
   final Object? defaultValue;
   final bool? ignore;
