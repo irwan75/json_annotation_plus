@@ -28,13 +28,15 @@ extension DoubleExtensionPick on Pick {
         return double.parse(initialValue.toString());
       }
       throw WrongInitialValueException(
-          message: 'field $keys: initial value is null');
+        message: 'field $keys: initial value is null',
+      );
     } catch (e) {
       if (e is WrongInitialValueException) {
         rethrow;
       } else {
         throw WrongFormatException(
-            message: 'field $keys: initial value is not double');
+          message: 'field $keys: initial value is not double',
+        );
       }
     }
   }

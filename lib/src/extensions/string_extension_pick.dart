@@ -34,13 +34,15 @@ extension StringExtensionPick on Pick {
         return initialValue;
       }
       throw WrongInitialValueException(
-          message: 'field $keys: initial value is null');
+        message: 'field $keys: initial value is null',
+      );
     } catch (e) {
       if (e is WrongInitialValueException) {
         rethrow;
       } else {
         throw WrongFormatException(
-            message: 'field $keys: initial value is not String');
+          message: 'field $keys: initial value is not String',
+        );
       }
     }
   }

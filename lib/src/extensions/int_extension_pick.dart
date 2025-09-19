@@ -28,13 +28,15 @@ extension IntExtensionPick on Pick {
         return int.parse(initialValue.toString());
       }
       throw WrongInitialValueException(
-          message: 'field $keys: initial value is null');
+        message: 'field $keys: initial value is null',
+      );
     } catch (e) {
       if (e is WrongInitialValueException) {
         rethrow;
       } else {
         throw WrongFormatException(
-            message: 'field $keys: initial value is not int');
+          message: 'field $keys: initial value is not int',
+        );
       }
     }
   }

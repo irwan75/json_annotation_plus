@@ -37,13 +37,15 @@ extension BoolExtensionPick on Pick {
         return initialValue;
       }
       throw WrongInitialValueException(
-          message: 'field $keys: initial value is null');
+        message: 'field $keys: initial value is null',
+      );
     } catch (e) {
       if (e is WrongInitialValueException) {
         rethrow;
       } else {
         throw WrongFormatException(
-            message: 'field $keys: initial value is not bool');
+          message: 'field $keys: initial value is not bool',
+        );
       }
     }
   }
